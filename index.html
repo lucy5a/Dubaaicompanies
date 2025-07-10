@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dubai Trip Offer</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .overlay {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.5), rgba(0,0,0,0.7));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .overlay h1 {
+      font-size: clamp(24px, 5vw, 48px);
+      margin-bottom: 12px;
+      animation: fadeInDown 1s ease;
+    }
+
+    .overlay p {
+      font-size: clamp(14px, 3vw, 20px);
+      margin-bottom: 25px;
+      color: #f0f0f0;
+      animation: fadeInUp 1s ease;
+      max-width: 600px;
+    }
+
+    .ratings {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+      animation: fadeInUp 1.5s ease;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .ratings div {
+      background: rgba(255,255,255,0.1);
+      padding: 10px 20px;
+      border-radius: 12px;
+      min-width: 140px;
+    }
+
+    .ratings h2 {
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #00c9ff, #92fe9d);
+      color: black;
+      padding: 14px 28px;
+      font-size: 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+      animation: fadeInUp 2s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #00bfff, #66ff99);
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+
+      .ratings {
+        gap: 10px;
+      }
+    }
+      footer {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    footer a {
+      color: #aaa;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
+    footer div:last-child {
+      color: #888;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="1752135764713.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay">
+      <h1>Explore Dubai Companies🏝️</h1>
+      <p>Burj Khalifa | Desert Safari | Museum of the Future | Dubai Mall </p>
+
+      <div class="ratings">
+        <div>
+          <h2> SECURITY GUARD</h2>
+
+          <p>Salary=50k Monthly(2,142.49 Dirham)<br>Age= 18-50 yrs</p>
+        </div>
+        
+        <div>
+          <h2>⭐ 4.5</h2>
+          <p>Google (5,200+ Ratings)</p>
+        </div>
+      </div>
+
+      <a href="address.html" class="btn">APPLY</a>
+    </div>
+  </div>
+    <!-- Footer Section -->
+  <footer>
+    <div>
+      <a href="#">About</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookies</a>
+    </div>
+    <div>
+      &copy; 2025 Dubai companies. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

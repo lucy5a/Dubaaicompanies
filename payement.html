@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pay ₹299 - Dubai Trip</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #fdfcfb, #e2d1c3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      animation: popIn 0.4s ease;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .box h2 {
+      margin-bottom: 10px;
+      color: #2d3436;
+    }
+
+    .box p {
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 15px;
+    }
+
+    .qr-code {
+      width: 220px;
+      height: auto;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    .pay-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 14px 30px;
+      border: none;
+      font-size: 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .pay-btn:hover {
+      background: linear-gradient(135deg, #4e0faa, #1f5be2);
+    }
+
+    .note {
+      font-size: 14px;
+      margin-top: 15px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Make Your Payment</h2>
+    <p>Amount: ₹299 only<br>Scan or click to pay via UPI</p>
+
+    <!-- ✅ QR Image (replace this with your real QR image) -->
+    <img src="qr.code.jpg" alt="UPI QR" class="qr-code" />
+
+    <!-- ✅ UPI Link + Redirect after 8 seconds -->
+    <br>
+    <a class="pay-btn"
+       href="upi://pay?pa=8269960958-2@ybl&am=299&cu=INR&tn=Dubai Companies"
+       onclick="setTimeout(() => { window.location.href='thanku.html'; }, 20000);">
+       Pay ₹299 Now
+    </a>
+
+    <p class="note">You'll be redirected to confirmation page after payment</p>
+  </div>
+
+</body>
+</html>
